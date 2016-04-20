@@ -7,12 +7,50 @@
   <version>1.0.0-SNAPSHOT</version>
   <name>kmkim</name>
   <url>http://maven.apache.org</url>
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
+  
+  <!-- 스프링부트의 설정 정보를 상속 -->
+       <parent>
+             <groupId> org.springframework.boot</groupId >
+             <artifactId> spring-boot-starter-parent</artifactId >
+             <version> 1.2.4.RELEASE</version >
+       </parent>
+
+       <dependencies>
+             <!-- 스프링 부트로 웹 에플리케이션 -->
+             <dependency>
+                   <groupId> org.springframework.boot</groupId >
+                   <artifactId> spring-boot-starter-web</artifactId >
+             </dependency>
+
+             <!-- 유닛 테스트에 필요한 라이브라리 참조정보 -->
+             <dependency>
+                   <groupId> org.springframework.boot</groupId >
+                   <artifactId> spring-boot-starter-test</artifactId >
+                   <scope> test</scope >
+             </dependency>
+
+             <!-- Junit -->
+             <dependency>
+                   <groupId> junit</groupId >
+                   <artifactId> junit</artifactId >
+                   <version>3.8.1</version>
+                   <scope> test</scope >
+             </dependency>
+       </dependencies>
+
+       <!-- 빌드 관련 maven 설정 -->
+       <build>
+             <plugins>
+                   <plugin>
+                         <groupId> org.springframework.boot</groupId >
+                         <artifactId> spring-boot-maven -plugin</artifactId >
+                   </plugin>
+             </plugins>
+       </build>
+
+       <properties>
+             <!-- Java 버전 -->
+             <java.version> 1.8</java.version >
+       </properties>
+  
 </project>
