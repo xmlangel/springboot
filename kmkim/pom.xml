@@ -44,9 +44,18 @@
                    <plugin>
                          <groupId> org.springframework.boot</groupId >
                          <artifactId> spring-boot-maven-plugin</artifactId >
-                   </plugin>
+                         <!-- 스프링 로디드 -->
+                        <dependencies>
+                               <dependency>
+                                     <groupId> org.springframework</groupId >
+                                     <artifactId> springloaded</artifactId >
+                                     <version> 1.2.5.RELEASE</version >
+                               </dependency>
+                         </dependencies>
+                   </plugin>                  
              </plugins>
        </build>
+
 
        <properties>
              <!-- Java 버전 -->
